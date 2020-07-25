@@ -11,8 +11,6 @@ package main
 import (
 	"fmt"
 	"sort"
-	//"math"
-	//"sort"
 )
 
 func main() {
@@ -28,14 +26,14 @@ func main() {
 
 		if arr[i]+arr[l] == 15 {
 			fmt.Print("...Es OK\n")
-			//break
+			i++
+			l--
 		} else if arr[i]+arr[l] < 15 {
 			i++
 			fmt.Print("...No OK\n")
 		} else { // A[i] + A[j] > sum
 			l--
 			fmt.Print("...No OK\n")
-			break
 		}
 	}
 
